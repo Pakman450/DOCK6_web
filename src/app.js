@@ -1,28 +1,19 @@
-const http = require('http')
-const fs = require('fs')
-const port = 3000
+
+const express = require('express');
+const app = express();
+const path = require('path');
+const router = express.Router();
+
+app.use(express.static(__dirname + '/'));
+
+router.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+  //__dirname : It will resolve to your project folder.
+});
 
 
-const server = http.createServer(function(req,res){
-    res.writeHead(200, { 'Content-Type': 'text/html' })
-    fs.readFile('index.html',function(error,data){
-        if (error){
-            res.writeHead(404)
-            res.write('Error: File Not Found')
-        } else {
-            res.write(data)
-        }
-        res.end()
-    })
-    // res.write('lol')
-    // res.end()
+//add the router
+app.use('/', router);
+app.listen(process.env.port || 3000);
 
-})
-
-server.listen(port, function(error){
-    if (error) {
-        console.log('Something went wrong',error)
-    }else {
-        console.log ('Server is listening on port ' + port)
-    }
-})
+console.log('Running at Port 3000');
