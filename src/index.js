@@ -21,7 +21,7 @@ function toMembers(){
 
 }
 
-//if click, a page to show how to download dock with a link to the github repo
+//if click, a page to show how to download dock6 with a link to the github repo
 function toDownloadDock(){
 
 }
