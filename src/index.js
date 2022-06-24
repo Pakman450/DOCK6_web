@@ -1,6 +1,7 @@
 
 console.log('start')
-const lets_dock = document.getElementById('lets_dock')
+
+
 
 
 //this is where it gets complicated
@@ -22,9 +23,20 @@ function toMembers(){
 }
 
 //if click, a page to show how to download dock6 with a link to the github repo
-function toDownloadDock(){
+function toDownloadDock(e){
+    
+    // open a downloadDock.html without making a new window
+    window.open('./downloadDock/downloadDock.html','_self')
 
 }
+
+const navButtons = document.querySelectorAll('#button-menu a')
+var list_Button = Array.from(navButtons)
+
+list_Button.forEach(btn => btn.addEventListener('click',e=> toDownloadDock(e)))
+
+
+
 
 
 
