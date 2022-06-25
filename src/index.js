@@ -1,3 +1,4 @@
+// const { list } = require("postcss")
 
 console.log('start')
 
@@ -30,13 +31,23 @@ function toDownloadDock(e){
 
 }
 
+function ifButtonPress(e,btn){
+
+    // console.log(btn.innerText)
+
+    if (btn.innerText === "Download DOCK6"){
+        toDownloadDock()
+    }
+
+}
+
+
+
+
 const navButtons = document.querySelectorAll('#button-menu a')
 var list_Button = Array.from(navButtons)
 
-list_Button.forEach(btn => btn.addEventListener('click',e=> toDownloadDock(e)))
-
-
-
+list_Button.forEach(btn => btn.addEventListener('click',(e)=> ifButtonPress(e,btn)))
 
 
 
