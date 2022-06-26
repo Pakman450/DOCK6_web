@@ -12,11 +12,17 @@ function toLetsDockSecNavBar(e){
 
     if (document.getElementById('secNavBar').classList.contains('hidden')){
         document.getElementById('secNavBar').classList.toggle('hidden')
-
+        // document.getElementById('secNavBar').classList.add('transition')
+        // document.getElementById('secNavBar').classList.add('ease-out')
+        // document.getElementById('secNavBar').classList.add('duration-100')
+        // transition ease-out duration-100
+    } else{
+        document.getElementById('secNavBar').classList.toggle('hidden')
     }
     
 
 }
+
 
 //this is where if you hover above the about button it will
 //show..[INCOMPLETE]
@@ -58,6 +64,7 @@ const navButtons = document.querySelectorAll('#button-menu a')
 var list_Button = Array.from(navButtons)
 
 list_Button.forEach(btn => btn.addEventListener('click',(e)=> ifButtonPress(e,btn)))
+
 
 
 
