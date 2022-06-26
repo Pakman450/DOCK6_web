@@ -11,12 +11,15 @@ router.get('/',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
-//get downloadDock.page
-router.get('/downloadDock',function(req,res){
-  // res.sendFile(path.join(__dirname+'/index.html'));
-  res.sendFile(path.join(__dirname+'/downloadDock/downloadDock.html'));
-  //__dirname : It will resolve to your project folder.
-});
+
+// I realized you don't download DOCK, you have to 
+// get a license!
+// //get downloadDock.page
+// router.get('/downloadDock',function(req,res){
+//   // res.sendFile(path.join(__dirname+'/index.html'));
+//   res.sendFile(path.join(__dirname+'/downloadDock/downloadDock.html'));
+//   //__dirname : It will resolve to your project folder.
+// });
 
 
 //add the router
