@@ -8,7 +8,13 @@ console.log('start')
 //this is where it gets complicated
 //if hover, shows the relevant steps to get a docking goign
 //planning to show Prepare Files then Let's Dock!
-function toLetsDock(){
+function toLetsDockSecNavBar(e){
+
+    if (document.getElementById('secNavBar').classList.contains('hidden')){
+        document.getElementById('secNavBar').classList.toggle('hidden')
+
+    }
+    
 
 }
 
@@ -37,6 +43,10 @@ function ifButtonPress(e,btn){
 
     if (btn.innerText === "Download DOCK6"){
         toDownloadDock()
+    } else if (btn.innerText === "Let's dock!"){
+        toLetsDockSecNavBar()
+
+
     }
 
 }
