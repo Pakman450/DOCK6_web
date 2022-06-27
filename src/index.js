@@ -10,15 +10,23 @@ console.log('start')
 //planning to show Prepare Files then Let's Dock!
 function toLetsDockSecNavBar(e){
 
-    if (document.getElementById('secNavBar').classList.contains('hidden')){
-        document.getElementById('secNavBar').classList.toggle('hidden')
-        // document.getElementById('secNavBar').classList.add('transition')
-        // document.getElementById('secNavBar').classList.add('ease-out')
-        // document.getElementById('secNavBar').classList.add('duration-100')
-        // transition ease-out duration-100
-    } else{
-        document.getElementById('secNavBar').classList.toggle('hidden')
+    var secNavBar = document.getElementById('secNavBar')
+
+    //if the secondary nav bar contains hidden properties
+    //remove those propertie and add transition effect and show 
+    //the bar, else hide them
+    if (secNavBar.classList.contains('scale-95','opacity-0') ){
+        secNavBar.classList.remove('opacity-0','scale-95','transition','ease-in')
+        secNavBar.classList.add('transition','ease-out','duration-500','opacity-100','scale-100')
+    
+
+    }else if (secNavBar.classList.contains('opacity-100','scale-100') ) {
+        secNavBar.classList.remove('opacity-100','scale-100','transition','ease-out','duration-500')
+        secNavBar.classList.add('opacity-0','scale-95','transition','ease-in','duration-500')
+   
+
     }
+
     
 
 }
