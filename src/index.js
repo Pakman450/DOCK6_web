@@ -51,28 +51,40 @@ function toDownloadDock(e){
 
 }
 
-function ifButtonPress(e,btn){
+function toDOCK() {
+    DOCK = document.getElementById("DOCK!")
+    if(DOCK.innerHTML === ''){
+        DOCK.innerHTML = '<embed type="text/html" src="./letsDOCK/letsDOCKcopy.html" width="100%" height="800" >'
+        document.getElementById("homePage").innerHTML = ""
+    }
 
+    console.log("lol")
+   
+  }
+
+function ifButtonPress(e,btn){
     // console.log(btn.innerText)
 
     if (btn.innerText === "Download DOCK6"){
         toDownloadDock()
     } else if (btn.innerText === "Let's dock!"){
         toLetsDockSecNavBar()
-
-
+    } else if (btn.innerText === "DOCK!"){
+        toDOCK()
+    } else if (btn.innerText === "DOCK6"){
+        window.open('./index.html','_self')
     }
 
 }
 
 
-
-
 const navButtons = document.querySelectorAll('#button-menu a')
 var list_Button = Array.from(navButtons)
-
 list_Button.forEach(btn => btn.addEventListener('click',(e)=> ifButtonPress(e,btn)))
 
+const secNavButtons = document.querySelectorAll('#secNavBar a')
+var secList_Button = Array.from(secNavButtons)
+secList_Button.forEach(btn => btn.addEventListener('click',(e)=> ifButtonPress(e,btn)))
 
 
 
