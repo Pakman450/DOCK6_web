@@ -43,13 +43,13 @@ function toMembers(){
 
 }
 
-//if click, a page to show how to download dock6 with a link to the github repo
-function toDownloadDock(e){
+// //if click, a page to show how to download dock6 with a link to the github repo
+// function toDownloadDock(e){
     
-    // open a downloadDock.html without making a new window
-    window.open('./downloadDock/downloadDock.html','_self')
+//     // open a downloadDock.html without making a new window
+//     window.open('./downloadDock/downloadDock.html','_self')
 
-}
+// }
 
 function toDOCK() {
     DOCK = document.getElementById("DOCK!")
@@ -65,9 +65,9 @@ function toDOCK() {
 function ifButtonPress(e,btn){
     // console.log(btn.innerText)
 
-    if (btn.innerText === "Download DOCK6"){
-        toDownloadDock()
-    } else if (btn.innerText === "Let's dock!"){
+    // if (btn.innerText === "Download DOCK6"){
+    //     toDownloadDock()
+    if (btn.innerText === "Let's dock!"){
         toLetsDockSecNavBar()
     } else if (btn.innerText === "DOCK!"){
         toDOCK()
