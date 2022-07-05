@@ -7,6 +7,9 @@ module.exports = {
         'bg-gray-800-monochromatic': '#314158',
         'bg-#5A6679': '#5A6679',
       },
+      backgroundImage: {
+        'hexagon_pattern': "url('/img/background.jpg')",
+      },
      },
    },
    plugins: [],
