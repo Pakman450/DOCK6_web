@@ -3,8 +3,6 @@
 console.log('start')
 
 
-
-
 //this is where it gets complicated
 //if hover, shows the relevant steps to get a docking goign
 //planning to show Prepare Files then Let's Dock!
@@ -52,11 +50,25 @@ function toMembers(){
 // }
 
 function toDOCK() {
-    DOCK = document.getElementById("DOCK!")
+    var DOCK = document.getElementById("DOCK!")
+    var div=document.getElementById("homePage").children
+
     if(DOCK.innerHTML === ''){
-        DOCK.innerHTML = '<embed type="text/html" src="./letsDOCK/letsDOCKcopy.html" width="100%" height="800" >'
-        document.getElementById("homePage").innerHTML = ""
+        // DOCK.innerHTML = '<embed type="text/html" src="./letsDOCK/letsDOCKcopy.html" width="100%" height="800" >'
+        // DOCK.innerHTML = '<iframe src="./letsDOCK/letsDOCKcopy.html" frameborder="0"></iframe>'
+        DOCK.innerHTML = '<object type="text/html" data="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%"></object>'
+        // DOCK.innerHTML = '<object type="text/html" data="./letsDOCK/letsDOCKcopy.html" style="height:100%;width:100%"></object>'
+
+        for (let i=0;i<div.length;i++){
+            div[i].innerHTML=""
+            div[i].removeAttribute('class')
+        }
+        homePage=document.getElementById("homePage")
+        homePage.innerHTML=""
+        homePage.removeAttribute('class')
+
     }
+
 
     console.log("lol")
    
