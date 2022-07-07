@@ -5,7 +5,8 @@ module.exports = {
      extend: {
       animation: {
         'typeWriter': 'typingAnim 3.5s steps(40, end), blinkingCursor .5s step-end 8',
-        'typeWriter2': 'hiddenTyping 8s, typingAnim 3.5s steps(40, end) 8s, blinkingCursor .5s step-end infinite 8s'
+        'typeWriter2': 'hiddenTyping 12s, typingAnim 3.5s steps(40, end) 12s, blinkingCursor .5s step-end infinite 12s, staticCursor 12s 4s',
+        'gifDelay': 'typingAnim 3.5'
       },
 
       keyframes: {
@@ -22,9 +23,9 @@ module.exports = {
           to: {borderColor: 'transparent'},
           '50%': {borderColor: 'navajowhite',borderRightWidth: '2px',borderStyle: 'solid'},
         },
-        blinkingEnd: {
-          from: {borderColor: 'transparent',borderRightWidth: '0px'},
-          to: {borderColor: 'transparent',borderRightWidth: '0px'},
+        staticCursor: {
+          from: {borderColor: 'navajowhite',borderRightWidth: '2px',borderStyle: 'solid'},
+          to: {borderColor: 'navajowhite',borderRightWidth: '2px',borderStyle: 'solid'},
         }
       },
       colors: {

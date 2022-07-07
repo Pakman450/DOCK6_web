@@ -841,9 +841,52 @@ video {
   }
 }
 
+@-webkit-keyframes staticCursor {
+  from {
+    border-color: navajowhite;
+    border-right-width: 2px;
+    border-style: solid;
+  }
+
+  to {
+    border-color: navajowhite;
+    border-right-width: 2px;
+    border-style: solid;
+  }
+}
+
+@keyframes staticCursor {
+  from {
+    border-color: navajowhite;
+    border-right-width: 2px;
+    border-style: solid;
+  }
+
+  to {
+    border-color: navajowhite;
+    border-right-width: 2px;
+    border-style: solid;
+  }
+}
+
 .animate-typeWriter2 {
-  -webkit-animation: hiddenTyping 8s, typingAnim 3.5s steps(40, end) 8s, blinkingCursor .5s step-end infinite 8s;
-          animation: hiddenTyping 8s, typingAnim 3.5s steps(40, end) 8s, blinkingCursor .5s step-end infinite 8s;
+  -webkit-animation: hiddenTyping 12s, typingAnim 3.5s steps(40, end) 12s, blinkingCursor .5s step-end infinite 12s, staticCursor 12s 4s;
+          animation: hiddenTyping 12s, typingAnim 3.5s steps(40, end) 12s, blinkingCursor .5s step-end infinite 12s, staticCursor 12s 4s;
+}
+
+@keyframes typingAnim {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.animate-gifDelay {
+  -webkit-animation: typingAnim 3.5;
+          animation: typingAnim 3.5;
 }
 
 .content-center {
@@ -920,10 +963,6 @@ video {
 
 .border-4 {
   border-width: 4px;
-}
-
-.border-r-2 {
-  border-right-width: 2px;
 }
 
 .border-solid {
