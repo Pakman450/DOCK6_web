@@ -734,6 +734,31 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@-webkit-keyframes visHide {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes visHide {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: hidden;
+  }
+}
+
+.animate-hide1 {
+  -webkit-animation: visHide 0s infinite 3.4s;
+          animation: visHide 0s infinite 3.4s;
+}
+
 @-webkit-keyframes typingAnim {
   from {
     width: 0;
@@ -787,8 +812,23 @@ video {
 }
 
 .animate-typeWriter {
-  -webkit-animation: typingAnim 3.5s steps(40, end), blinkingCursor .5s step-end 8;
-          animation: typingAnim 3.5s steps(40, end), blinkingCursor .5s step-end 8;
+  -webkit-animation: typingAnim 3s steps(40, end), blinkingCursor .5s step-end 6;
+          animation: typingAnim 3s steps(40, end), blinkingCursor .5s step-end 6;
+}
+
+@keyframes visHide {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: hidden;
+  }
+}
+
+.animate-hide2 {
+  -webkit-animation: visHide 3.2s;
+          animation: visHide 3.2s;
 }
 
 @-webkit-keyframes hiddenTyping {
@@ -870,23 +910,8 @@ video {
 }
 
 .animate-typeWriter2 {
-  -webkit-animation: hiddenTyping 12s, typingAnim 3.5s steps(40, end) 12s, blinkingCursor .5s step-end infinite 12s, staticCursor 12s 4s;
-          animation: hiddenTyping 12s, typingAnim 3.5s steps(40, end) 12s, blinkingCursor .5s step-end infinite 12s, staticCursor 12s 4s;
-}
-
-@keyframes typingAnim {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-.animate-gifDelay {
-  -webkit-animation: typingAnim 3.5;
-          animation: typingAnim 3.5;
+  -webkit-animation: hiddenTyping 7s, typingAnim 0s steps(40, end) 7s, blinkingCursor .5s step-end infinite 3.2s, staticCursor 4s 3.2s;
+          animation: hiddenTyping 7s, typingAnim 0s steps(40, end) 7s, blinkingCursor .5s step-end infinite 3.2s, staticCursor 4s 3.2s;
 }
 
 .content-center {

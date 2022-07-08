@@ -4,9 +4,13 @@ module.exports = {
    theme: {
      extend: {
       animation: {
-        'typeWriter': 'typingAnim 3.5s steps(40, end), blinkingCursor .5s step-end 8',
-        'typeWriter2': 'hiddenTyping 12s, typingAnim 3.5s steps(40, end) 12s, blinkingCursor .5s step-end infinite 12s, staticCursor 12s 4s',
-        'gifDelay': 'typingAnim 3.5'
+        'typeWriter': 'typingAnim 3s steps(40, end), blinkingCursor .5s step-end 6',
+        'typeWriter2': 'hiddenTyping 7s, typingAnim 0s steps(40, end) 7s, blinkingCursor .5s step-end infinite 3.2s, staticCursor 4s 3.2s',
+        'gifDelay': 'typingAnim 3.5',
+        'hide1': 'visHide 0s infinite 3.4s',
+        'hide2': 'visHide 3.2s',
+
+
       },
 
       keyframes: {
@@ -17,6 +21,10 @@ module.exports = {
         hiddenTyping:{
           from: {width: '0',borderColor: 'transparent'},
           to: {width:'0',borderColor: 'transparent'}
+        },
+        visHide:{
+          from: {visibility: 'hidden'},
+          to: {visibility: 'hidden'}
         },
         blinkingCursor: {
           from: {borderColor: 'transparent'},
