@@ -99,18 +99,5 @@ var secList_Button = Array.from(secNavButtons)
 secList_Button.forEach(btn => btn.addEventListener('click',(e)=> ifButtonPress(e,btn)))
 
 
-//For the blinking cursor
-var cursor = true;
-var speed = 400;
-setInterval(() => {
-  if(cursor) {
-    document.getElementById('cursor').style.opacity = 0;
-    cursor = false;
-  }else {
-    document.getElementById('cursor').style.opacity = 1;
-    cursor = true;
-  }
-}, speed);
-
 
 console.log('end')
