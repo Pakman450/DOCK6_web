@@ -666,24 +666,16 @@ video {
   height: 1rem;
 }
 
+.h-\[330\.398px\] {
+  height: 330.398px;
+}
+
 .h-6 {
   height: 1.5rem;
 }
 
 .h-96 {
   height: 24rem;
-}
-
-.h-\[332px\] {
-  height: 332px;
-}
-
-.h-\[330px\] {
-  height: 330px;
-}
-
-.h-\[330\.398px\] {
-  height: 330.398px;
 }
 
 .min-h-full {
@@ -924,6 +916,31 @@ video {
 .animate-typeWriter2 {
   -webkit-animation: hiddenTyping 7s, typingAnim 0s steps(40, end) 7s, blinkingCursor .5s step-end infinite 3.2s, staticCursor 4s 3.2s;
           animation: hiddenTyping 7s, typingAnim 0s steps(40, end) 7s, blinkingCursor .5s step-end infinite 3.2s, staticCursor 4s 3.2s;
+}
+
+@-webkit-keyframes opacOn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes opacOn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+.animate-gifHide {
+  -webkit-animation: opacOn step-end 3.3s;
+          animation: opacOn step-end 3.3s;
 }
 
 .content-center {

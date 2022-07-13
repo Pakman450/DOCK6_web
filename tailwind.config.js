@@ -7,6 +7,7 @@ module.exports = {
         'typeWriter': 'typingAnim 3s steps(40, end), blinkingCursor .5s step-end 6',
         'typeWriter2': 'hiddenTyping 7s, typingAnim 0s steps(40, end) 7s, blinkingCursor .5s step-end infinite 3.2s, staticCursor 4s 3.2s',
         'gifDelay': 'typingAnim 3.5',
+        'gifHide': 'opacOn step-end 3.3s',
         'hide1': 'visHide 0s infinite 3.4s',
         'hide2': 'visHide 3.2s',
 
@@ -25,6 +26,11 @@ module.exports = {
         visHide:{
           from: {visibility: 'hidden'},
           to: {visibility: 'hidden'}
+        },
+        opacOn:{
+          from: {opacity: '0'},
+          to: {opacity: '100%'}
+
         },
         blinkingCursor: {
           from: {borderColor: 'transparent'},
