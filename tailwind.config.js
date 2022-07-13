@@ -4,7 +4,7 @@ module.exports = {
    theme: {
      extend: {
       animation: {
-        'typeWriter': 'typingAnim 3s steps(40, end), blinkingCursor .5s step-end 6',
+        'typeWriter': 'typingAnim 3s steps(40, end), staticCursor 3s ',
         'typeWriter2': 'hiddenTyping 7s, typingAnim 0s steps(40, end) 7s, blinkingCursor .5s step-end infinite 3.2s, staticCursor 4s 3.2s',
         'gifDelay': 'typingAnim 3.5',
         'gifHide': 'widthChange 1s infinite 7s, opacOn step-end 3.4s' ,
@@ -55,6 +55,9 @@ module.exports = {
       },
       backgroundImage: {
         'hexagon_pattern': "url('/img/background.jpg')",
+      },
+      fontFamily: {
+        'sans': ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
       },
      },
    },
