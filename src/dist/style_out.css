@@ -674,6 +674,18 @@ video {
   height: 24rem;
 }
 
+.h-\[332px\] {
+  height: 332px;
+}
+
+.h-\[330px\] {
+  height: 330px;
+}
+
+.h-\[330\.398px\] {
+  height: 330.398px;
+}
+
 .min-h-full {
   min-height: 100%;
 }
