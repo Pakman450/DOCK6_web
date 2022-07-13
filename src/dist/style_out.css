@@ -918,6 +918,26 @@ video {
           animation: hiddenTyping 7s, typingAnim 0s steps(40, end) 7s, blinkingCursor .5s step-end infinite 3.2s, staticCursor 4s 3.2s;
 }
 
+@-webkit-keyframes widthChange {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+@keyframes widthChange {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
 @-webkit-keyframes opacOn {
   from {
     opacity: 0;
@@ -939,8 +959,8 @@ video {
 }
 
 .animate-gifHide {
-  -webkit-animation: opacOn step-end 3.3s;
-          animation: opacOn step-end 3.3s;
+  -webkit-animation: widthChange 1s infinite 7s, opacOn step-end 3.4s;
+          animation: widthChange 1s infinite 7s, opacOn step-end 3.4s;
 }
 
 .content-center {
