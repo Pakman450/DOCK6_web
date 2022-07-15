@@ -56,7 +56,7 @@ function toDOCK() {
     if(DOCK.innerHTML === ''){
         // DOCK.innerHTML = '<embed type="text/html" src="./letsDOCK/letsDOCKcopy.html" width="100%" height="800" >'
         // DOCK.innerHTML = '<iframe src="./letsDOCK/letsDOCKcopy.html" frameborder="0"></iframe>'
-        DOCK.innerHTML = '<object type="text/html" data="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%"></object>'
+        DOCK.innerHTML = '<object data="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%"></object>'
         // DOCK.innerHTML = '<object type="text/html" data="./letsDOCK/letsDOCKcopy.html" style="height:100%;width:100%"></object>'
 
         for (let i=0;i<div.length;i++){
