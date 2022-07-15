@@ -2,6 +2,27 @@
 
 console.log('start')
 
+function checkIfEmpty(){
+    const replace = document.getElementById('replace')
+    
+    if(replace.innerHTML==""){
+        return true
+    }
+    return false
+}
+function emptyHome(){
+    var div=document.getElementById("homePage").children
+
+
+    for (let i=0;i<div.length;i++){
+        div[i].innerHTML=""
+        div[i].removeAttribute('class')
+    }
+    homePage=document.getElementById("homePage")
+    homePage.innerHTML=""
+    homePage.removeAttribute('class')
+}
+
 
 //this is where it gets complicated
 //if hover, shows the relevant steps to get a docking goign
@@ -41,59 +62,48 @@ function toMembers(){
 
 }
 
-// //if click, a page to show how to download dock6 with a link to the github repo
-// function toDownloadDock(e){
-    
-//     // open a downloadDock.html without making a new window
-//     window.open('./downloadDock/downloadDock.html','_self')
+
+// function toDOCK() {
+//     var DOCK = document.getElementById("replace")
+
+//     DOCK.innerHTML = '<object data="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%"></object>'
+
+//     emptyHome()
 
 // }
+// function toPrepareFiles() {
+//     var Prepare = document.getElementById("replace")
 
-function toDOCK() {
-    var DOCK = document.getElementById("DOCK!")
-    var div=document.getElementById("homePage").children
-
-    if(DOCK.innerHTML === ''){
-        // DOCK.innerHTML = '<embed type="text/html" src="./letsDOCK/letsDOCKcopy.html" width="100%" height="800" >'
-        // DOCK.innerHTML = '<iframe src="./letsDOCK/letsDOCKcopy.html" frameborder="0"></iframe>'
-        DOCK.innerHTML = '<object data="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%"></object>'
-        // DOCK.innerHTML = '<object type="text/html" data="./letsDOCK/letsDOCKcopy.html" style="height:100%;width:100%"></object>'
-
-        for (let i=0;i<div.length;i++){
-            div[i].innerHTML=""
-            div[i].removeAttribute('class')
-        }
-        homePage=document.getElementById("homePage")
-        homePage.innerHTML=""
-        homePage.removeAttribute('class')
-
-    }
-
-
-    console.log("lol")
-   
-  }
+//     Prepare.innerHTML = '<object data="./prepare_file/prepareFile.html" style="min-height:100vh;width:100%"></object>'
+//     emptyHome()
+  
+// }
 
 function ifButtonPress(e,btn){
-    // console.log(btn.innerText)
+    var DOCK = document.getElementById("replace")
 
-    // if (btn.innerText === "Download DOCK6"){
-    //     toDownloadDock()
     if (btn.innerText === "Let's dock!"){
         toLetsDockSecNavBar()
+    } else if (btn.innerText === "Prepare Files"){
+        DOCK.innerHTML = '<object data="./prepare_file/prepareFile.html" style="min-height:100vh;width:100%"></object>'
+        emptyHome()
+
     } else if (btn.innerText === "DOCK!"){
-        toDOCK()
+        DOCK.innerHTML = '<object data="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%"></object>'
+        emptyHome()
+
     } else if (btn.innerText === "DOCK6"){
         window.open('./index.html','_self')
     }
 
 }
 
-
+//For the first tier navbar
 const navButtons = document.querySelectorAll('#button-menu a')
 var list_Button = Array.from(navButtons)
 list_Button.forEach(btn => btn.addEventListener('click',(e)=> ifButtonPress(e,btn)))
 
+//For the second tier navbar
 const secNavButtons = document.querySelectorAll('#secNavBar a')
 var secList_Button = Array.from(secNavButtons)
 secList_Button.forEach(btn => btn.addEventListener('click',(e)=> ifButtonPress(e,btn)))
