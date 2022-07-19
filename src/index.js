@@ -85,11 +85,11 @@ function ifButtonPress(e,btn){
     if (btn.innerText === "Let's dock!"){
         toLetsDockSecNavBar()
     } else if (btn.innerText === "Prepare Files"){
-        DOCK.innerHTML = '<object data="./prepare_file/prepareFile.html" style="min-height:100vh;width:100%"></object>'
+        DOCK.innerHTML = '<iframe type="text/html"  src="./prepare_file/prepareFile.html" style="min-height:100vh;width:100%" scrolling="no" frameborder="0"></iframe>'
         emptyHome()
 
     } else if (btn.innerText === "DOCK!"){
-        DOCK.innerHTML = '<object data="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%"></object>'
+        DOCK.innerHTML = '<iframe type="text/html"  src="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%" scrolling="no" frameborder="0"></iframe>'
         emptyHome()
 
     } else if (btn.innerText === "DOCK6"){
