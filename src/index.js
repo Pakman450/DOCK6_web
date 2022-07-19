@@ -2,6 +2,26 @@
 
 console.log('start')
 
+function loadHTML(filename){
+    console.log(`filename id: ${filename}`)
+    let xhttp
+    let element = document.getElementById('replace')
+
+    let file = filename
+    if (file){
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+                if (this.status == 200) { element.innerHTML = this.responseText}
+                if ( this.status == 400) { element.innerHTML = "<h1> PAGE NOT FOUND. </h1>"}
+            }
+        }
+        xhttp.open("GET",`${filename}`,true)
+        xhttp.send()
+        return
+    }
+}
+
 function checkIfEmpty(){
     const replace = document.getElementById('replace')
     
@@ -85,11 +105,13 @@ function ifButtonPress(e,btn){
     if (btn.innerText === "Let's dock!"){
         toLetsDockSecNavBar()
     } else if (btn.innerText === "Prepare Files"){
-        DOCK.innerHTML = '<iframe type="text/html"  src="./prepare_file/prepareFile.html" style="min-height:100vh;width:100%" scrolling="no" frameborder="0"></iframe>'
+        // DOCK.innerHTML = '<iframe type="text/html"  src="./prepare_file/prepareFile.html" style="min-height:100vh;width:100%" scrolling="no" frameborder="0"></iframe>'
+        loadHTML('./prepare_file/prepareFile.html')
         emptyHome()
 
     } else if (btn.innerText === "DOCK!"){
-        DOCK.innerHTML = '<iframe type="text/html"  src="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%" scrolling="no" frameborder="0"></iframe>'
+        // DOCK.innerHTML = '<iframe type="text/html"  src="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%" scrolling="no" frameborder="0"></iframe>'
+        loadHTML('./letsDock/letsDockcopy.html')
         emptyHome()
 
     } else if (btn.innerText === "DOCK6"){
