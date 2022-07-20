@@ -2,6 +2,8 @@
 
 console.log('start')
 
+
+//To load up external HTML files
 function loadHTML(filename){
     console.log(`filename id: ${filename}`)
     let xhttp
@@ -104,6 +106,9 @@ function ifButtonPress(e,btn){
 
     if (btn.innerText === "Let's dock!"){
         toLetsDockSecNavBar()
+    } else if (btn.innerText === "Pose Reproduction") {
+        loadHTML('./PoseReproduction/poseReproduction.html')
+        emptyHome()
     } else if (btn.innerText === "Prepare Files"){
         // DOCK.innerHTML = '<iframe type="text/html"  src="./prepare_file/prepareFile.html" style="min-height:100vh;width:100%" scrolling="no" frameborder="0"></iframe>'
         loadHTML('./prepare_file/prepareFile.html')

@@ -562,11 +562,6 @@ video {
   position: static;
 }
 
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -731,14 +726,6 @@ video {
   min-width: 876.547px;
 }
 
-.min-w-\[700px\] {
-  min-width: 700px;
-}
-
-.min-w-\[800px\] {
-  min-width: 800px;
-}
-
 .min-w-\[850px\] {
   min-width: 850px;
 }
@@ -759,14 +746,6 @@ video {
 
 .max-w-2xl {
   max-width: 42rem;
-}
-
-.max-w-\[700px\] {
-  max-width: 700px;
-}
-
-.max-w-\[800px\] {
-  max-width: 800px;
 }
 
 .max-w-\[850px\] {
@@ -1133,11 +1112,6 @@ video {
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
-.border-yellow-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(253 224 71 / var(--tw-border-opacity));
-}
-
 .border-yellow-100 {
   --tw-border-opacity: 1;
   border-color: rgb(254 249 195 / var(--tw-border-opacity));
@@ -1206,11 +1180,6 @@ video {
 .bg-zinc-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(113 113 122 / var(--tw-bg-opacity));
-}
-
-.bg-zinc-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(161 161 170 / var(--tw-bg-opacity));
 }
 
 .bg-hexagon_pattern {
