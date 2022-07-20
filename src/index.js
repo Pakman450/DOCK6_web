@@ -2,6 +2,8 @@
 
 console.log('start')
 
+const externalPath = "external"
+
 
 //To load up external HTML files
 function loadHTML(filename){
@@ -107,16 +109,16 @@ function ifButtonPress(e,btn){
     if (btn.innerText === "Let's dock!"){
         toLetsDockSecNavBar()
     } else if (btn.innerText === "Pose Reproduction") {
-        loadHTML('./PoseReproduction/poseReproduction.html')
+        loadHTML(`./${externalPath}/poseReproduction.html`)
         emptyHome()
     } else if (btn.innerText === "Prepare Files"){
         // DOCK.innerHTML = '<iframe type="text/html"  src="./prepare_file/prepareFile.html" style="min-height:100vh;width:100%" scrolling="no" frameborder="0"></iframe>'
-        loadHTML('./prepare_file/prepareFile.html')
+        loadHTML(`./${externalPath}/prepareFile.html`)
         emptyHome()
 
     } else if (btn.innerText === "DOCK!"){
         // DOCK.innerHTML = '<iframe type="text/html"  src="./letsDOCK/letsDOCKcopy.html" style="min-height:100vh;width:100%" scrolling="no" frameborder="0"></iframe>'
-        loadHTML('./letsDock/letsDockcopy.html')
+        loadHTML(`./${externalPath}/letsDockcopy.html`)
         emptyHome()
 
     } else if (btn.innerText === "DOCK6"){
