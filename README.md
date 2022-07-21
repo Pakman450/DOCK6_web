@@ -1,4 +1,4 @@
-# mol2db_web
+# DOCK6_web
 
 Make sure you call:
 `
